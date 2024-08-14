@@ -1,6 +1,9 @@
 package chess;
 
+import boardgame.Posicao;
 import boardgame.Tabuleiro;
+import chess.piece.King;
+import chess.piece.Rook;
 
 public class PartidaXadrez {
 
@@ -8,6 +11,7 @@ public class PartidaXadrez {
 	
 	public PartidaXadrez() {
 		tabuleiro = new Tabuleiro(8, 8);
+		iniciarConfiguracao();
 	}
 	
 	public PecaXadrez[][] getPecas(){
@@ -18,6 +22,12 @@ public class PartidaXadrez {
 			}
 		}
 		return matriz;
+	}
+	
+	public void iniciarConfiguracao() {
+		tabuleiro.LugarDaPeca(new Rook(tabuleiro, Cor.WHITE), new Posicao(2, 1));
+		tabuleiro.LugarDaPeca(new King(tabuleiro, Cor.BLACK), new Posicao(0, 4));
+		tabuleiro.LugarDaPeca(new King(tabuleiro, Cor.WHITE), new Posicao(7, 4));
 	}
 	
 }
