@@ -12,6 +12,7 @@ public class Peca {
 	
 	protected Tabuleiro getTabuleiro() { // ele é de uso interno de tabuleiro
 		return tabuleiro;
+		
 	}
 	
 	
