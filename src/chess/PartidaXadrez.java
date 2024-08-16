@@ -29,9 +29,19 @@ public class PartidaXadrez {
 	}
 	
 	private void iniciarConfiguracao() {
-		novoLugarDaPeca('b', 6, new Rook(tabuleiro, Cor.WHITE));
-		novoLugarDaPeca('e', 8, new King(tabuleiro, Cor.BLACK));
-		novoLugarDaPeca('e', 1, new King(tabuleiro, Cor.WHITE));
+		novoLugarDaPeca('c', 1, new Rook(tabuleiro, Cor.WHITE));
+		novoLugarDaPeca('c', 2, new Rook(tabuleiro, Cor.WHITE));
+		novoLugarDaPeca('d', 2, new Rook(tabuleiro, Cor.WHITE));
+		novoLugarDaPeca('e', 2, new Rook(tabuleiro, Cor.WHITE));
+		novoLugarDaPeca('e', 1, new Rook(tabuleiro, Cor.WHITE));
+		novoLugarDaPeca('d', 1, new King(tabuleiro, Cor.WHITE));
+
+		novoLugarDaPeca('c', 7, new Rook(tabuleiro, Cor.BLACK));
+		novoLugarDaPeca('c', 8, new Rook(tabuleiro, Cor.BLACK));
+		novoLugarDaPeca('d', 7, new Rook(tabuleiro, Cor.BLACK));
+		novoLugarDaPeca('e', 7, new Rook(tabuleiro, Cor.BLACK));
+		novoLugarDaPeca('e', 8, new Rook(tabuleiro, Cor.BLACK));
+		novoLugarDaPeca('d', 8, new King(tabuleiro, Cor.BLACK));
 	}
 	
 }
