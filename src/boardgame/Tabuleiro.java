@@ -49,6 +49,22 @@ public class Tabuleiro {
 		peca.posicao = posicao;
 	}
 	
+	
+	public Peca removerPeca(Posicao posicao) {
+		if(!posicaoExistent(posicao)) {
+			throw new TabuleiroException("Não ha essa posição no tabuleiro");
+		}
+		if(peca(posicao) == null) {
+			return null;
+		}
+		
+		Peca aux = peca(posicao);
+		aux.posicao = null;
+		pecas[posicao.getLinha()][posicao.getColuna()] = null;
+		return  aux;
+	}
+	
+	
 	private boolean posicaoExistent(int linha, int coluna) {
 		return linha >= 0 && linha < linhas && coluna >= 0 && coluna < colunas; // linhas e colunas sao a da classe tabuleiro e o sem o S vai ser dado na hora
 	}
