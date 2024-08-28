@@ -18,7 +18,7 @@ public class Programa {
 		while(true) {
 			try {
 				UI.clearScreen();
-				UI.printTabuleiro(partida.getPecas());// ui(user interface)é a classe e toda linha é uma função
+				UI.printPartida(partida);// ui(user interface)é a classe e toda linha é uma função
 				System.out.println();
 				System.out.print("Source: ");
 				PosicaoXadrez origem = UI.lerPosicaoXadrez(scan);
